@@ -35,6 +35,7 @@ search.addEventListener("click", function (e) {
     .then((res) => {
       if (res.cod !== 200) {
         alert("City not found!");
+        input.value="";
         return;
       }
 

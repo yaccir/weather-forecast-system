@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/output.css" />
+    <!-- <link rel="stylesheet" href="src/output.css" />
+    uncomment the next statement  if you dont have installed tailwind in your system  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Weather Forecast System</title>
   </head>
   <body class="bg-blue-50">
@@ -37,7 +39,7 @@
 
         <!-- Recent Search Dropdown -->
         <section id="selectsec" class="w-full mt-4 sm:mt-6">
-          <select id="select" class="w-full md:w-[70%] text-base sm:text-2xl font-bold p-3 sm:p-5 border-4 rounded-2xl border-blue-900 block ml-0">
+          <select id="select" class="w-full md:w-[68%] text-base sm:text-2xl font-bold p-3 sm:p-5 border-4 rounded-2xl border-blue-900 block ml-0">
             <option disabled selected>Recent Searches</option>
           </select>
         </section>

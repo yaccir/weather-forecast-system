@@ -26,3 +26,4 @@ This is a responsive weather forecast web application built using JavaScript, HT
 - LocalStorage
 - Geolocation API
 
+view it on github: https://github.com/yaccir/weather-forecast-system

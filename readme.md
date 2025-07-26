@@ -3,7 +3,9 @@
 This is a responsive weather forecast web application built using JavaScript, HTML, and Tailwind CSS. It allows users to view current weather data, 5-day weather forecasts, and weather information based on their current location using the OpenWeatherMap API.
 
 ---
-
+ uncomment this statement in index.html if you dont have installed the tailwind in your system using cli method 
+ 
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 ## Features
 
 - Search weather by city name

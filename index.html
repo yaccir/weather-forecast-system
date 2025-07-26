@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Weather Forecast System</title>
+  </head>
+  <body class="bg-blue-50">
+    <section class="min-h-screen w-full p-2 sm:p-4 md:p-10 overflow-auto shadow-2xl rounded-2xl mx-auto max-w-screen-xl">
+      
+      <!-- Header Section -->
+      <header class="w-full mx-auto shadow-xl rounded-2xl p-4 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-2 sm:gap-4">
+        <a href="#"> 
+          <img class="w-16 sm:w-20 md:w-24" src="images/icon.png" alt="Weather Icon" />
+        </a>
+        <h1 class="text-xl sm:text-3xl md:text-5xl font-bold text-center">Weather Forecast System</h1>
+      </header>
+
+      <!-- Search Section -->
+      <main class="w-full mt-6 sm:mt-10">
+        <form class="flex flex-col md:flex-row justify-between items-center w-full gap-2 sm:gap-4">
+          <input id="input"
+            type="text"
+            placeholder="Search Your City"
+            class="p-2 sm:p-3 text-base sm:text-xl font-bold rounded-2xl w-full md:w-[70%] border-4 border-blue-900"
+          />
+          <button id="search" type="submit"
+            class="p-2 sm:p-3 bg-blue-400 text-white w-full md:w-[15%] rounded-2xl hover:bg-blue-600 cursor-pointer font-bold text-sm sm:text-lg">
+            Search
+          </button>
+          <button id="location" type="button"
+            class="p-2 sm:p-3 bg-blue-400 text-white w-full md:w-[15%] rounded-2xl hover:bg-blue-600 cursor-pointer font-bold text-sm sm:text-lg">
+            My Location
+          </button>
+        </form>
+
+        <!-- Recent Search Dropdown -->
+        <section id="selectsec" class="w-full mt-4 sm:mt-6">
+          <select id="select" class="w-full md:w-[70%] text-base sm:text-2xl font-bold p-3 sm:p-5 border-4 rounded-2xl border-blue-900 block ml-0">
+            <option disabled selected>Recent Searches</option>
+          </select>
+        </section>
+
+        <!-- Current Weather -->
+        <section class="currentweather flex flex-col md:flex-row w-full justify-between items-center mx-auto mt-6 sm:mt-10 gap-4 sm:gap-6">
+          
+          <!-- Left Weather Box -->
+          <section class="w-full md:w-[48%] shadow-2xl rounded-2xl p-4 sm:p-6 bg-white">
+            <div class="flex flex-col items-center">
+              <h2 class="font-bold text-xl sm:text-3xl md:text-4xl mb-4">Current Weather</h2>
+              <div class="flex flex-col sm:flex-row items-center">
+                <img class="w-24 sm:w-32" src="images/icon.png" alt="Weather Icon" id="image" />
+                <div class="sm:ml-4 mt-4 sm:mt-0 text-center sm:text-left">
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-2" id="city">New York</h3>
+                  <p class="text-2xl sm:text-3xl font-bold mb-2" id="temp">75 <sup>°</sup>F</p>
+                  <p class="font-bold text-base sm:text-xl" id="date">Wednesday, July 23, 2025</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Humidity and Wind -->
+          <section class="w-full md:w-[48%] space-y-4 sm:space-y-6">
+            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 shadow-xl rounded-2xl p-3 sm:p-4 bg-white">
+              <h3 class="text-lg sm:text-2xl font-bold">Humidity</h3>
+              <img class="w-10 sm:w-16" src="images/humidity.png" alt="Humidity Icon" />
+              <p id="humidity" class="text-lg sm:text-2xl font-bold">65%</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 shadow-xl rounded-2xl p-3 sm:p-4 bg-white">
+              <h3 class="text-lg sm:text-2xl font-bold">Wind Speed</h3>
+              <img class="w-10 sm:w-16" src="images/wind.png" alt="Wind Icon" />
+              <p id="wind" class="text-lg sm:text-2xl font-bold">12 km/h</p>
+            </div>
+          </section>
+        </section>
+
+        <!-- Forecast + Additional Info -->
+        <section class="flex flex-col lg:flex-row justify-between w-full mt-6 sm:mt-10 gap-4 sm:gap-6">
+          
+          <!-- 5 Day Forecast -->
+          <section id="dayforcast" class=" hidden w-full lg:w-[65%]  bg-blue-300 rounded-2xl p-4 sm:p-5">
+            <h3 class="text-center text-xl sm:text-3xl font-bold mb-4 sm:mb-6">5-Day Forecast</h3>
+            <div class="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-4 overflow-x-auto">
+              <!-- Forecast Card 1 -->
+              <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate1">2025-07-26</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon1" src="images/icon.png" alt="Weather Icon" />
+                <p id="recenttemp1" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
+                <h3 id="recenthumidity1" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+              </div>
+  <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate1">2025-07-26</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon1" src="images/icon.png" alt="Weather Icon" />
+                <p id="recenttemp1" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
+                <h3 id="recenthumidity1" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+              </div>
+                <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate1">2025-07-26</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon1" src="images/icon.png" alt="Weather Icon" />
+                <p id="recenttemp1" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
+                <h3 id="recenthumidity1" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+              </div>
+                <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate1">2025-07-26</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon1" src="images/icon.png" alt="Weather Icon" />
+                <p id="recenttemp1" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
+                <h3 id="recenthumidity1" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+              </div>
+                <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate1">2025-07-26</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon1" src="images/icon.png" alt="Weather Icon" />
+                <p id="recenttemp1" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
+                <h3 id="recenthumidity1" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+              </div>
+              <!-- Repeat more cards if needed -->
+            </div>
+          </section>
+
+          <!-- Additional Info -->
+          <section class="w-full lg:w-[30%] bg-white shadow-xl rounded-2xl p-4 sm:p-6 text-center">
+            <h5 class="text-xl sm:text-2xl font-bold mb-4">Additional Information</h5>
+            <div class="space-y-3 sm:space-y-4 text-base sm:text-xl">
+              <div class="flex justify-between">
+                <p class="font-bold">Feels Like</p>
+                <p id="feelslike" class="font-bold">73 <sup>°</sup>F</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-bold">Pressure</p>
+                <p id="pressure" class="font-bold">1015 hPa</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-bold">Visibility</p>
+                <p id="visibility" class="font-bold">12 Km</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

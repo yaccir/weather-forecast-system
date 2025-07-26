@@ -8,6 +8,7 @@ const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
 const location1 = document.getElementById("location");
 const fdayforecast = document.getElementById("dayforcast");
+const date=document.getElementById("date");
 
 const feelslike = document.getElementById("feelslike");
 const pressure = document.getElementById("pressure");
@@ -15,6 +16,7 @@ const visibility = document.getElementById("visibility");
 
 const apend = document.getElementsByTagName("select")[0]; // Recent cities dropdown
 const apiKey = "6eff8116980e61428df61fc6e27ca8d5";
+
 
 // Handle Search Button Click
 search.addEventListener("click", function (e) {
@@ -93,6 +95,10 @@ function updateCurrentWeather(res) {
   humidity.innerText = res.main.humidity + " %";
   wind.innerText = res.wind.speed + " m/s";
   image.src = `https://openweathermap.org/img/wn/${res.weather[0].icon}@4x.png`;
+    const date1 = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    date.innerText=date1.toLocaleDateString('en-US', options);
+
 
   feelslike.innerText = res.main.feels_like + " °C";
   pressure.innerText = res.main.pressure + " hPa";
@@ -199,6 +205,7 @@ function fivedayforecast(value) {
         document.getElementById(`recenttemp${index + 1}`).innerText = data.main.temp + " °C";
         document.getElementById(`recenticon${index + 1}`).src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
         document.getElementById(`recenthumidity${index + 1}`).innerText = "Humidity "+data.main.humidity + " %";
+        document.getElementById(`recentwind${index + 1}`).innerText = "Wind " + data.wind.speed + " m/s";
       });
 
       // Show forecast section

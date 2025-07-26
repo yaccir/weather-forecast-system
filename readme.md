@@ -4,7 +4,6 @@ This is a responsive weather forecast web application built using JavaScript, HT
 
 ---
  uncomment this statement in index.html if you dont have installed the tailwind in your system using cli method 
- 
  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 ## Features
 
@@ -22,7 +21,7 @@ This is a responsive weather forecast web application built using JavaScript, HT
 ## Technologies Used
 
 - HTML5
-- Tailwind CSS
+- Tailwind CSS (should be installed in your system as well using cli method)
 - JavaScript (ES6)
 - OpenWeatherMap API
 - LocalStorage

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="src/output.css" />
-    uncomment the next statement  if you dont have installed tailwind in your system  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="src/output.css" />
+    <!-- uncomment the next statement  if you dont have installed tailwind in your system  --> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <title>Weather Forecast System</title>
   </head>
   <body class="bg-blue-50">
@@ -54,9 +54,9 @@
               <div class="flex flex-col sm:flex-row items-center">
                 <img class="w-24 sm:w-32" src="images/icon.png" alt="Weather Icon" id="image" />
                 <div class="sm:ml-4 mt-4 sm:mt-0 text-center sm:text-left">
-                  <h3 class="text-2xl sm:text-3xl font-bold mb-2" id="city">New York</h3>
-                  <p class="text-2xl sm:text-3xl font-bold mb-2" id="temp">75 <sup>°</sup>F</p>
-                  <p class="font-bold text-base sm:text-xl" id="date">Wednesday, July 23, 2025</p>
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-2" id="city">-</h3>
+                  <p class="text-2xl sm:text-3xl font-bold mb-2" id="temp">- <sup>°</sup>F</p>
+                  <p class="font-bold text-base sm:text-xl" id="date">-</p>
                 </div>
               </div>
             </div>
@@ -67,12 +67,12 @@
             <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 shadow-xl rounded-2xl p-3 sm:p-4 bg-white">
               <h3 class="text-lg sm:text-2xl font-bold">Humidity</h3>
               <img class="w-10 sm:w-16" src="images/humidity.png" alt="Humidity Icon" />
-              <p id="humidity" class="text-lg sm:text-2xl font-bold">65%</p>
+              <p id="humidity" class="text-lg sm:text-2xl font-bold">-</p>
             </div>
             <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 shadow-xl rounded-2xl p-3 sm:p-4 bg-white">
               <h3 class="text-lg sm:text-2xl font-bold">Wind Speed</h3>
               <img class="w-10 sm:w-16" src="images/wind.png" alt="Wind Icon" />
-              <p id="wind" class="text-lg sm:text-2xl font-bold">12 km/h</p>
+              <p id="wind" class="text-lg sm:text-2xl font-bold">-</p>
             </div>
           </section>
         </section>
@@ -86,38 +86,43 @@
             <div class="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-4 overflow-x-auto">
               <!-- Forecast Card 1 -->
               <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
-                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate1">2025-07-26</p>
-                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon1" src="images/icon.png" alt="Weather Icon" />
-                <p id="recenttemp1" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
-                <h3 id="recenthumidity1" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate1">-</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon1" src="" alt="Weather Icon" />
+                <h3 id="recenttemp1" class="text-sm sm:text-lg font-bold mt-2">-</h3>
+                <p id="recenthumidity1" class="text-sm sm:text-lg font-bold mt-1">-</p>
+                <p id="recentwind1" class="text-sm sm:text-lg font-bold mt-1">-</p>
               </div>
                 <!-- Forecast Card 2 -->
                <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
-                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate2">2025-07-26</p>
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate2">-</p>
                 <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon2" src="images/icon.png" alt="Weather Icon" />
-                <p id="recenttemp2" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
-                <h3 id="recenthumidity2" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+                <h3 id="recenttemp2" class="text-sm sm:text-lg font-bold mt-2">-</h3>
+                <p id="recenthumidity2" class="text-sm sm:text-lg font-bold mt-1">-</p>
+                <p id="recentwind2" class="text-sm sm:text-lg font-bold mt-1">-</p>
               </div>
                 <!-- Forecast Card 3 -->
                 <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
-                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate3">2025-07-26</p>
-                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon3" src="images/icon.png" alt="Weather Icon" />
-                <p id="recenttemp3" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
-                <h3 id="recenthumidity3" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate3">-</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon3" src="" alt="Weather Icon" />
+                <h3 id="recenttemp3" class="text-sm sm:text-lg font-bold mt-2">-</h3>
+                <p id="recenthumidity3" class="text-sm sm:text-lg font-bold mt-1">-</p>
+                  <p id="recentwind3" class="text-sm sm:text-lg font-bold mt-1"></p>
               </div>
                 <!-- Forecast Card 4 -->
                 <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
-                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate4">2025-07-26</p>
-                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon4" src="images/icon.png" alt="Weather Icon" />
-                <p id="recenttemp4" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
-                <h3 id="recenthumidity4" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate4">-</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon4" src="" alt="Weather Icon" />
+                <h3 id="recenttemp4" class="text-sm sm:text-lg font-bold mt-2">-</h3>
+                <p id="recenthumidity4" class="text-sm sm:text-lg font-bold mt-1">-</p>
+                  <p id="recentwind4" class="text-sm sm:text-lg font-bold mt-1">-</p>
               </div>
                 <!-- Forecast Card 5 -->
                 <div class="min-w-[160px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] flex flex-col items-center border-[3px] border-blue-900 rounded-2xl bg-white p-3 shadow-md">
-                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate5">2025-07-26</p>
-                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon5" src="images/icon.png" alt="Weather Icon" />
-                <p id="recenttemp5" class="text-sm sm:text-lg font-bold mt-2">27.82 °C</p>
-                <h3 id="recenthumidity5" class="text-sm sm:text-lg font-bold mt-1">45%</h3>
+                <p class="text-base sm:text-xl font-bold mb-2" id="recentdate5">-</p>
+                <img class="w-16 h-16 sm:w-20 sm:h-20" id="recenticon5" src="" alt="Weather Icon" />
+                <h3 id="recenttemp5" class="text-sm sm:text-lg font-bold mt-2">-</h3>
+                <p id="recenthumidity5" class="text-sm sm:text-lg font-bold mt-1">-</p>
+                  <p id="recentwind5" class="text-sm sm:text-lg font-bold mt-1">-</p>
               </div>
               <!-- Repeat more cards if needed -->
             </div>
@@ -129,15 +134,15 @@
             <div class="space-y-3 sm:space-y-4 text-base sm:text-xl">
               <div class="flex justify-between">
                 <p class="font-bold">Feels Like</p>
-                <p id="feelslike" class="font-bold">73 <sup>°</sup>F</p>
+                <p id="feelslike" class="font-bold">- <sup>°</sup>F</p>
               </div>
               <div class="flex justify-between">
                 <p class="font-bold">Pressure</p>
-                <p id="pressure" class="font-bold">1015 hPa</p>
+                <p id="pressure" class="font-bold">-</p>
               </div>
               <div class="flex justify-between">
                 <p class="font-bold">Visibility</p>
-                <p id="visibility" class="font-bold">12 Km</p>
+                <p id="visibility" class="font-bold">-</p>
               </div>
             </div>
           </section>
